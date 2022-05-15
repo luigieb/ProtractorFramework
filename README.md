@@ -67,7 +67,6 @@ exports.config = {
     ]
   }
 };
-To configure Serenity/JS reporting services, check out the demo project and consult the Serenity/JS Handbook.
 
 Passing Options to Cucumber.js
 All of the cucumberOpts will be passed to cucumberjs as arguments.
@@ -80,12 +79,6 @@ cucumberOpts: {
   format: ['progress', 'pretty:output.txt'],
   // ...
 }
-The following parameters have special behavior:
-
-require - globs will be expanded to multiple --require arguments
-rerun - value is passed as an argument; for use with the rerun feature
-Formatters when tests are sharded or with multi capabilities
-If you have a formatter that outputs to a path and your tests are sharded or you have multi capabilities then this library will add the PID to the path to make them unique. The reason for this is multiple processes can write to the same path which ends up clobbering each other. You'll end up with 1 file per process that protractor spawns.
 
 exports.config = {
   capabilities: {
@@ -99,21 +92,6 @@ exports.config = {
   }
 };
 
-Contributing
-Pull requests are welcome. Commits should have an appropriate message and be squashed.
-
-For Contributors
-Ensure that the following dependencies are installed:
-
-Java SDK and JRE
-Node.js
-Google Chrome
-Clone the github repository:
-
-git clone https://github.com/protractor-cucumber-framework/protractor-cucumber-framework
-cd protractor-cucumber-framework
-npm install
-Testing
 Start a selenium server:
 
 npm run webdriver
